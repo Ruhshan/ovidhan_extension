@@ -1,0 +1,29 @@
+#ov-bubble-main {
+    border: 1px solid #999;
+    border-radius: 4px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    color: #222;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: normal;
+    padding: 9px;
+    position: absolute;
+    width: 300px;
+    background: seashell;
+    left: 20px;
+    top: 40.51px;
+    display: none;
+}
+#ov-bubble-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16px;
+    height: 16px;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    opacity: 0.35;
+}
+

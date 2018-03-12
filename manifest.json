@@ -1,0 +1,27 @@
+{
+  "name": "Ovidhan",
+  "description": "Lookup the selected Bangla word for definition etc.",
+  "version": "1.0.1",
+  "permissions": ["contextMenus","tabs"],
+  "background": {
+    "persistent": false,
+    "scripts": ["js/background.js"]
+  },
+  "manifest_version": 2,
+  
+  "icons": {
+    "16": "img/ico_16.png"
+  },
+  "content_scripts": [
+    { "css":["css/ovidhan.css"],
+      "matches": ["file://*/*","http://*/*","https://*/*"],
+      "js": ["js/content-scripts.js"]
+    }
+  ],
+  "web_accessible_resources": ["js/script.js"],  
+  "browser_action": {
+    "default_icon": "img/ico_16.png"
+    
+  }
+  
+}
