@@ -12,7 +12,7 @@ function onClickHandler(info, tab) {
 
 function seach_dict(sText){
   
-  var request = $.get( "http://192.168.1.191:8000/finder/find/", { query: sText } );
+  var request = $.get( "https://fathomless-citadel-33718.herokuapp.com/finder/find/", { query: sText } );
   
   request.success(function(result) {
     var obj = JSON.parse(result);
