@@ -35,6 +35,10 @@ chrome.runtime.onMessage.addListener(
       if (request.action == "show")
         
         var query = request.query;
+        var meaning = request.meaning;
+
+        //console.log("query "+query);
+        //console.log("meaning "+meaning);
 
         var bubble_main = document.getElementById("ov-bubble-main");
         
@@ -45,6 +49,9 @@ chrome.runtime.onMessage.addListener(
         var bubble_query = document.getElementById("gdx-bubble-query-row");
         
         bubble_query.innerHTML = '<b>'+query+'</b>';
+
+        var bubble_meaning = document.getElementById("gdx-bubble-meaning");
+        bubble_meaning.innerHTML = meaning;
         //scroll_pos = getScrollPostion();
         // console.log(scrollY);
         // console.log(scroll_pos);
@@ -54,7 +61,7 @@ chrome.runtime.onMessage.addListener(
         var l = rect.x-150+(rect.width / 2);
         var t = (scrollY+rect.y) - document.getElementById("ov-bubble-main").clientHeight-3;
 
-        console.log(t);
+        //console.log(t);
 
         bubble_main.setAttribute("style","left:" +l+"px; top:"+t+"px; display: block");
 

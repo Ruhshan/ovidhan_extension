@@ -6,15 +6,27 @@ function onClickHandler(info, tab) {
   var sText = info.selectionText;
   // addHistory(sText);
   // openDefinitionPage(sText);
-	result_popup(sText);
+  seach_dict(sText);
+  
 };
 
-
-function result_popup(querytext){
+function seach_dict(sText){
   
+  var request = $.get( "http://192.168.1.191:8000/finder/find/", { query: sText } );
+  
+  request.success(function(result) {
+    var obj = JSON.parse(result);
+    result_popup(obj.query, obj.meaning);
+
+  });
+  
+
+}
+
+function result_popup(query, meaning){
   chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
     
-  chrome.tabs.sendMessage(tabs[0].id, {action: "show", query:querytext}, function(response) {
+  chrome.tabs.sendMessage(tabs[0].id, {action: "show", query:query, meaning:meaning}, function(response) {
       //console.log(response.farewell);
     
     });
