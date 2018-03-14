@@ -1,6 +1,6 @@
 # ovidhan_extension
 
-1. Download the ovidhan_extension-master.zip
+1. Download [Ovidhan Extension](https://github.com/Ruhshan/ovidhan_extension/archive/0.0.1.zip)
 2. Unzip the downloaded file.
 3. Open Chrome go to 'chrome://extensions/'
 4. Click 'Load unpacked extension'
